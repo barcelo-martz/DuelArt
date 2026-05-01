@@ -1,0 +1,24 @@
+{
+  "DualArt": {
+    "Landing": {
+      "Hero": {
+        "Title": "Where Art Goes",
+        "Subtitle": "To Battle",
+        "Description": "Compete. Vote. Collect. The arena where photographers, illustrators and musicians fight for glory in high-stakes digital combat.",
+        "StartCompeting": "START COMPETING",
+        "ExploreArt": "EXPLORE ART",
+        "Artists": "Artists",
+        "Tournaments": "Tournaments",
+        "VotesCast": "Votes Cast"
+      },
+      "Navbar": {
+        "Explore": "Explore",
+        "Tournaments": "Tournaments",
+        "Marketplace": "Marketplace",
+        "Artists": "Artists",
+        "Login": "Log in",
+        "Join": "Join"
+      }
+    }
+  }
+}

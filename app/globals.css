@@ -1,0 +1,200 @@
+/* Oculta la barra de scroll pero permite el scroll */
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+@import "tailwindcss";
+
+:root {
+  /* Light theme colors */
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #ffe7af;
+  --inverse-primary: #755b00;
+  --primary-container: #f5c842;
+  --on-primary: #3d2e00;
+  --on-primary-container: #6c5400;
+  --secondary: #ffb4a4;
+  --secondary-container: #8d1701;
+  --on-secondary: #640d00;
+  --on-secondary-container: #ff9a85;
+  --tertiary: #eae9e2;
+  --tertiary-container: #cecdc6;
+  --on-tertiary: #30312c;
+  --on-tertiary-container: #565752;
+  --error: #ffb4ab;
+  --error-container: #93000a;
+  --on-error: #690005;
+  --on-error-container: #ffdad6;
+  --surface: #131314;
+  --surface-dim: #131314;
+  --surface-bright: #3a393a;
+  --surface-container: #201f20;
+  --surface-container-low: #1c1b1c;
+  --surface-container-high: #2a2a2b;
+  --surface-container-highest: #353436;
+  --surface-container-lowest: #0e0e0f;
+  --surface-variant: #353436;
+  --on-surface: #e5e2e3;
+  --on-surface-variant: #d1c5ae;
+  --inverse-surface: #e5e2e3;
+  --inverse-on-surface: #313031;
+  --outline: #9a907b;
+  --outline-variant: #4e4634;
+  --primary-fixed: #ffe08f;
+  --primary-fixed-dim: #eec13c;
+  --on-primary-fixed: #241a00;
+  --on-primary-fixed-variant: #584400;
+  --secondary-fixed: #ffdad3;
+  --secondary-fixed-dim: #ffb4a4;
+  --on-secondary-fixed: #3e0500;
+  --on-secondary-fixed-variant: #8d1701;
+  --tertiary-fixed: #e3e3dc;
+  --tertiary-fixed-dim: #c7c7c0;
+  --on-tertiary-fixed: #1b1c18;
+  --on-tertiary-fixed-variant: #464742;
+  --surface-tint: #eec13c;
+}
+
+/* removed @theme inline block (not supported) */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark theme overrides */
+    --background: #131314;
+    --foreground: #e5e2e3;
+    --primary: #ffe7af;
+    --primary-container: #f5c842;
+    --on-primary: #3d2e00;
+    --on-primary-container: #6c5400;
+    --secondary: #ffb4a4;
+    --secondary-container: #8d1701;
+    --on-secondary: #640d00;
+    --on-secondary-container: #ff9a85;
+    --tertiary: #eae9e2;
+    --tertiary-container: #cecdc6;
+    --on-tertiary: #30312c;
+    --on-tertiary-container: #565752;
+    --error: #ffb4ab;
+    --error-container: #93000a;
+    --on-error: #690005;
+    --on-error-container: #ffdad6;
+    --surface: #131314;
+    --surface-dim: #131314;
+    --surface-bright: #3a393a;
+    --surface-container: #201f20;
+    --surface-container-low: #1c1b1c;
+    --surface-container-high: #2a2a2b;
+    --surface-container-highest: #353436;
+    --surface-container-lowest: #0e0e0f;
+    --surface-variant: #353436;
+    --on-surface: #e5e2e3;
+    --on-surface-variant: #d1c5ae;
+    --inverse-surface: #e5e2e3;
+    --inverse-on-surface: #313031;
+    --outline: #9a907b;
+    --outline-variant: #4e4634;
+    --primary-fixed: #ffe08f;
+    --primary-fixed-dim: #eec13c;
+    --on-primary-fixed: #241a00;
+    --on-primary-fixed-variant: #584400;
+    --secondary-fixed: #ffdad3;
+    --secondary-fixed-dim: #ffb4a4;
+    --on-secondary-fixed: #3e0500;
+    --on-secondary-fixed-variant: #8d1701;
+    --tertiary-fixed: #e3e3dc;
+    --tertiary-fixed-dim: #c7c7c0;
+    --on-tertiary-fixed: #1b1c18;
+    --on-tertiary-fixed-variant: #464742;
+    --surface-tint: #eec13c;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Manrope", var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  /* Example: use CSS variables for backgrounds and text */
+  /* You can now use var(--primary), var(--primary-container), etc. in your global or component styles */
+}
+
+/* Custom DuelArt classes */
+.hero-grid {
+  background-image: radial-gradient(#f5c842 0.5px, transparent 0.5px);
+  background-size: 40px 40px;
+  opacity: 0.1;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(to right, #f5c842, #e8a830);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass-nav {
+  background: rgba(10, 10, 11, 0.85);
+  backdrop-filter: blur(20px);
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined", sans-serif;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* Gallery grid (4 columns on wide screens) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1280px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.artwork-card {
+  margin: 0;
+}
+
+.artwork-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Additional styles used by the Artists directory page */
+.editorial-title {
+  font-family: "Newsreader", serif;
+  letter-spacing: -0.02em;
+}
+.stat-font {
+  font-family: "Space Grotesk", sans-serif;
+}
+.gold-gradient {
+  background: linear-gradient(135deg, #ffe7af 0%, #f5c842 100%);
+  color: var(--on-primary-fixed);
+}
+.shadow-ambient {
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.8);
+}

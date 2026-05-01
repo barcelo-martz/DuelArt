@@ -1,0 +1,85 @@
+import { join } from "path";
+import forms from "@tailwindcss/forms";
+
+/**
+ * Custom DuelArt Tailwind config with extended theme colors, borderRadius, and fontFamily
+ */
+const config = {
+  darkMode: "class",
+  content: [
+    join(__dirname, "app/**/*.{js,ts,jsx,tsx}"),
+    join(__dirname, "components/**/*.{js,ts,jsx,tsx}"),
+    join(__dirname, "hooks/**/*.{js,ts,jsx,tsx}"),
+    join(__dirname, "lib/**/*.{js,ts,jsx,tsx}"),
+    join(__dirname, "store/**/*.{js,ts,jsx,tsx}"),
+  ],
+  theme: {
+    extend: {
+      colors: {
+        "surface-bright": "var(--surface-bright)",
+        "on-tertiary": "var(--on-tertiary)",
+        "inverse-primary": "var(--inverse-primary)",
+        "on-surface": "var(--on-surface)",
+        tertiary: "var(--tertiary)",
+        "on-error-container": "var(--on-error-container)",
+        "on-primary": "var(--on-primary)",
+        "surface-container-low": "var(--surface-container-low)",
+        "primary-fixed": "var(--primary-fixed)",
+        "on-secondary-fixed-variant": "var(--on-secondary-fixed-variant)",
+        "secondary-fixed": "var(--secondary-fixed)",
+        "on-primary-fixed": "var(--on-primary-fixed)",
+        "on-primary-fixed-variant": "var(--on-primary-fixed-variant)",
+        "surface-container-lowest": "var(--surface-container-lowest)",
+        "outline-variant": "var(--outline-variant)",
+        primary: "var(--primary)",
+        "inverse-on-surface": "var(--inverse-on-surface)",
+        "on-secondary": "var(--on-secondary)",
+        "tertiary-fixed": "var(--tertiary-fixed)",
+        "error-container": "var(--error-container)",
+        error: "var(--error)",
+        "inverse-surface": "var(--inverse-surface)",
+        "on-secondary-container": "var(--on-secondary-container)",
+        "surface-tint": "var(--surface-tint)",
+        "on-tertiary-fixed-variant": "var(--on-tertiary-fixed-variant)",
+        surface: "var(--surface)",
+        background: "var(--background)",
+        "on-tertiary-fixed": "var(--on-tertiary-fixed)",
+        "on-background": "var(--on-background)",
+        "on-tertiary-container": "var(--on-tertiary-container)",
+        outline: "var(--outline)",
+        "on-error": "var(--on-error)",
+        "secondary-fixed-dim": "var(--secondary-fixed-dim)",
+        "tertiary-fixed-dim": "var(--tertiary-fixed-dim)",
+        "primary-container": "var(--primary-container)",
+        "on-surface-variant": "var(--on-surface-variant)",
+        "on-secondary-fixed": "var(--on-secondary-fixed)",
+        secondary: "var(--secondary)",
+        "surface-dim": "var(--surface-dim)",
+        "surface-container-highest": "var(--surface-container-highest)",
+        "surface-container-high": "var(--surface-container-high)",
+        "surface-container": "var(--surface-container)",
+        "tertiary-container": "var(--tertiary-container)",
+        "on-primary-container": "var(--on-primary-container)",
+        "surface-variant": "var(--surface-variant)",
+        "primary-fixed-dim": "var(--primary-fixed-dim)",
+        "secondary-container": "var(--secondary-container)",
+      },
+      borderRadius: {
+        DEFAULT: "0.125rem",
+        lg: "0.25rem",
+        xl: "0.5rem",
+        full: "0.75rem",
+      },
+      fontFamily: {
+        headline: ["Newsreader", "serif"],
+        body: ["Manrope", "sans-serif"],
+        label: ["Space Grotesk", "monospace"],
+        serif: ["Playfair Display", "serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
+    },
+  },
+  plugins: [forms],
+};
+
+export default config;

@@ -1,0 +1,24 @@
+{
+  "DualArt": {
+    "Landing": {
+      "Hero": {
+        "Title": "Donde el arte entra ",
+        "Subtitle": "En Combate",
+        "Description": "Compite. Vota. Colecciona. La arena donde fotógrafos, ilustradores y músicos luchan por la gloria en combates digitales de alto nivel.",
+        "StartCompeting": "COMENZAR A COMPETIR",
+        "ExploreArt": "EXPLORAR ARTE",
+        "Artists": "Artistas",
+        "Tournaments": "Torneos",
+        "VotesCast": "Votos Emitidos"
+      },
+      "Navbar": {
+        "Explore": "Explorar",
+        "Tournaments": "Torneos",
+        "Marketplace": "Mercado",
+        "Artists": "Artistas",
+        "Login": "Iniciar sesión",
+        "Join": "Unirse"
+    }
+    }
+  }
+}
